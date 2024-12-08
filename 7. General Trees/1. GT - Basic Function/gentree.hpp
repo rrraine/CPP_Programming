@@ -13,6 +13,9 @@ class GenTree {
 	virtual node* getRoot() = 0;
     
     // tree traversals
+    virtual void preOrderTraversal() = 0;
+    virtual void postOrderTraversal() = 0;
+    virtual void inOrderTraversal() = 0;
     
     virtual void print() = 0;
 

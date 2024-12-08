@@ -110,8 +110,19 @@ class GraphMatrix : public Graph {
         return '-';
     }
 
-    int outDegree(char v)  {
-        return 0;
+    int outDegree(char v)  { // row
+        int v1, count = 0;
+        for (int i = 0; i < num_vert; i++){
+            if (s_vertices[i] == v) v1 = i;
+        }
+        for (int i = 0; i < num_vert; i++){
+            for (int j = 0; j < num_vert; j++){
+                if (i == v1 && matrix[i][j] != 0){
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 
     int inDegree(char v)  {
