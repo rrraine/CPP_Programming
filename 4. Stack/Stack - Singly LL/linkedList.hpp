@@ -107,7 +107,7 @@ class LinkedList : public List {
 					cout << endl;
 				}
 	    		curr = curr->next;
-			} while (curr);
+			} while (curr != nullptr);
 		}
     }
 };

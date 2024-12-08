@@ -1,10 +1,10 @@
 #include <iostream>
-#include "singlystack.hpp"
+#include "arrayStack.hpp"
 using namespace std;
 
 int main() {
-    Stack* stack = new SinglyStack();
-    int input;
+    ArrayStack* stack = new ArrayStack();
+    char input;
     char op;
     do {
     	cout << "Enter op: ";
@@ -16,7 +16,7 @@ int main() {
 		    	break;
 		    case 'r':
 		    	cout << "Removed " << stack->pop() << endl;
-		     	break;
+		    	break;
 		    case 't':
 		    	cout << "Last element: " << stack->top() << endl;
 		    	break;
