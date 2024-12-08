@@ -11,6 +11,9 @@ class GenTree {
 	virtual void remove(node*) = 0;
 	virtual int getSize() = 0;
 	virtual node* getRoot() = 0;
+    
+    // tree traversals
+    
     virtual void print() = 0;
 
 };

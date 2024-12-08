@@ -86,6 +86,17 @@ class MyGenTree : public GenTree {
         size--;
 	}
 	
+    void preOrderTraversal(){
+        
+    }
+
+    void postOrderTraversal(){
+
+    }
+
+    void inOrderTraversal(){
+
+    }
 
     // DO NOT MODIFY this line onwards.
 	void print() {
