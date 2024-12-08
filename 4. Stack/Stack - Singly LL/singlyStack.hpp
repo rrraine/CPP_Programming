@@ -2,7 +2,7 @@
 // by inheriting the Stack class
 
 #include <iostream>
-#include "linkedlist.hpp"
+#include "linkedList.hpp"
 #include "stack.hpp"
 using namespace std;
 

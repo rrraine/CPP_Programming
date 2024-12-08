@@ -1,3 +1,6 @@
+#ifndef LINKEDLIST_HPP
+#define LINKEDLIST_HPP
+
 #include <cstdlib>
 #include <iostream>
 #include "list.hpp"
@@ -108,3 +111,5 @@ class LinkedList : public List {
 		}
     }
 };
+
+#endif
