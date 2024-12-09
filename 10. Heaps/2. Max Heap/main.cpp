@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-	MinHeap* heap = new ArrayMinHeap();
+	MaxHeap* heap = new ArrayMaxHeap();
     char op;
     int num;
     do {
@@ -16,7 +16,7 @@ int main() {
     			heap->insert(num);
     			break;
     		case 'r':
-    			cout << "Removed " << heap->removeMin() << endl;
+    			cout << "Removed " << heap->removeMax() << endl;
     			break;
     		case 'p':
     			heap->print();

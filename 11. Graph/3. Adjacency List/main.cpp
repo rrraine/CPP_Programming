@@ -3,6 +3,7 @@
 #include <cstring>
 using namespace std;
 
+
 struct Vertex;
 struct Edge;
 
@@ -19,6 +20,8 @@ struct Edge {
 };
 
 class AdjacencyListGraph {
+
+    int MAX = 100;
 private:
     Vertex vertices[MAX]; // Array of vertices
     Edge edges[MAX];      // Array of edges
