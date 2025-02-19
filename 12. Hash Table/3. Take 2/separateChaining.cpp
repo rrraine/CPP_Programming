@@ -10,10 +10,18 @@ class SeparateChaining : public Hashtable<K, V>{
     static const int TABLE_SIZE = 10;
     
 
+    // division method palang ang ginamit dito
     int hashFunction(K key){
         //return key % TABLE_SIZE;
         std::hash<K> hash;
         return hash(key) % TABLE_SIZE;
+    }
+
+    int  hashFunctionMAD(K key){
+        int a = 5, b = 3, p = 11;
+        std::hash<K> h;
+        size_t hash = h(key);
+        return ((a * hash + b) % p) % TABLE_SIZE;
     }
 
     struct Entry{
@@ -73,7 +81,7 @@ class SeparateChaining : public Hashtable<K, V>{
     }
     void print(){
         for (int i = 0; i < TABLE_SIZE; i++){
-            cout <<"[ " << i << "]: ";
+            cout <<"[" << i << "]: ";
             for (const auto &entry : table[i]){
                 cout << "(" << entry.key << ") -> " << entry.value << " ";
             }
