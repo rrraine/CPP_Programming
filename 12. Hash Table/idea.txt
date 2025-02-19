@@ -1,0 +1,9 @@
+// Compresssion Function
+// create a file for mad and division method 
+
+// HASH CODE
+- for int, long, double, and char: use direct mapping
+- for strings: use the polynomial hash code or the cycle hash cycles (better)
+
+// HASH Table
+- use both linear probing and separate chaining 
