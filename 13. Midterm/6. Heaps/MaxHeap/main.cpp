@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#include "arrayHeap.hpp"
+#include "maxheap.hpp"
+
 using namespace std;
 
 int main() {

@@ -1,8 +1,3 @@
-#include <iostream>
-#include <string>
-#include "arrayHeap.hpp"
-using namespace std;
-
 int main() {
 	MaxHeap* heap = new ArrayMaxHeap();
     char op;
