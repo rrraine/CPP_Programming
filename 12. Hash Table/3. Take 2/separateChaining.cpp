@@ -92,3 +92,20 @@ class SeparateChaining : public Hashtable<K, V>{
 
     }
 };
+
+int r1(int n){
+    int i,  sum = 0;
+    if (n == 0){
+        return 0;
+    }
+   
+    for (i = 7; i <= n; i += 2){
+
+        for (int j = 1; j < i / 2; j++){
+            sum += i;
+        }
+
+    }
+
+    return sum + r1(n - 2);
+}
