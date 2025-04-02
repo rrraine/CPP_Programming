@@ -18,7 +18,7 @@ class ArrayList : public List {
     int index;
     int capacity;
 
-
+    // 7
     void sizeUp(){
         int newcap = ceil(capacity * 1.5);
         int* temp = (int*)realloc(array, newcap * sizeof(int));
@@ -42,6 +42,7 @@ class ArrayList : public List {
             array = (int*)malloc(sizeof(int) * capacity);
         }
 
+        // 4 + 7 = 11
         int add(int num) {
             if (index == capacity) sizeUp();
             
@@ -50,16 +51,18 @@ class ArrayList : public List {
           return index;
         }
 
+        // 1
         int get(int pos){
           if (pos > index) return -1;
           
           return array[pos];
         }
-
+        // 1
         int size(){
             return index;
         }
 
+        // 7
         void swap(int pos1, int pos2){
             int temp = array[pos1];
             array[pos1] = array[pos2];
@@ -83,4 +86,5 @@ class ArrayList : public List {
             }
             cout << "]" << endl;
         }
+        // 7n + 4
 };

@@ -19,6 +19,7 @@ class LinkedList : public List {
     node* tail;
     int index;
 
+    // 7
     node* create_node(int num) {
       node* n = new node();
       n->element = num;
@@ -34,6 +35,7 @@ class LinkedList : public List {
             index = 0;
         }
 
+        // 13
         int add(int num) {
             node* n = create_node(num);
             if (!head){
@@ -50,6 +52,7 @@ class LinkedList : public List {
             return index;
         }
 
+        // 4n + 5
         int get(int pos) {
             if (pos >= index) return -1;
           node* curr = head;
@@ -59,28 +62,31 @@ class LinkedList : public List {
           return curr->element;
         }
 
+        // 1
         int size() {
             return index;
         }
 
+        // 10n + 21
         void swap(int pos1, int pos2) {
             if (pos1 == pos2 || pos1 >= index || pos2 >= index) return;
             
             // node* prev1 = nullptr;
-            // node* prev2 = nullptr;
+            // node* prev2 = nullptr; 9
             node* node1 = head;
             node* node2 = head;
-            
+            // 5n + 3
             for (int i = 0; node1 && i < pos1; i++){
                 // prev1 = node1;
                 node1 = node1->next;
             }
             
+            // 5n + 3
             for (int i = 0; node2 && i < pos2; i++){
                 // prev2 = node2;
                 node2 = node2->next;
             }
-            
+            // 7
            int temp = node2->element;
             node2->element = node1->element;
             node1->element = temp;
