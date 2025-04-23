@@ -149,6 +149,21 @@ private:
         size++;
     }
 
+
+    node* findNodeHelper(node* n, int elem){
+        if (!n ||n->elem == elem) {
+            return n;
+        } else if (elem < n->elem){
+            findNodeHelper(n->left, elem);
+        } else {
+            findNodeHelper(n->right, elem);
+        }
+
+    }
+
+    node* findNode(int num){
+        findNodeHelper(root, num);
+    }
 public:
 
     RedBlackTree() {
@@ -178,7 +193,8 @@ public:
     }
 
     bool search(int elem) {
-        return false; // Stub for now
+        
+        return findNode(elem) != nullptr || findNode(elem) != tnull;
     }
 
     void remove(int elem) {
