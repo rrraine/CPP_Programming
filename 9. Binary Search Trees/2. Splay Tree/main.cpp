@@ -1,4 +1,4 @@
-#include "bst.hpp"
+#include "bst.hpp" // fdsfs
 #include <iostream>
 using namespace std;
 int main() {
@@ -7,7 +7,7 @@ int main() {
     char op;
     int num;
     do {
-        cout << "Operation: ";
+        cout << "Operation: "; 
         cin >> op;
         switch (op) {
             case 'i':

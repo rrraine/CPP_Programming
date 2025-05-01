@@ -1,8 +1,8 @@
-#include "node.hpp"
+#include "node.hpp"  //dfsfs
 #include <iostream>
 using namespace std;
 class BSTree {
-    node* root;
+    node* root; 
     int size;
 
     node* create_node(int num, node* parent) {
