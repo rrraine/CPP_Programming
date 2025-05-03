@@ -15,7 +15,7 @@ private:
 
     // Helper methods
     node* createNode(int num, node* parent) {
-        assert(tnull != nullptr); // Ensure tnull is initialized
+        // assert(tnull != nullptr); // Ensure tnull is initialized
         return new node{num, true, parent, tnull, tnull};
     }
 
@@ -195,13 +195,19 @@ private:
     
         y = z;
         bool yOriginalColor = y->isRed;
+
+        // case 1: one child
         if (z->left == tnull) {
             x = z->right;
             nodeTransplant(z, z->right);
+        
         } else if (z->right == tnull) {
             x = z->left;
             nodeTransplant(z, z->left);
-        } else {
+        
+        } 
+        // case 3: two children
+        else {
             y = minimum(z->right);
             yOriginalColor = y->isRed;
             x = y->right;
@@ -352,3 +358,15 @@ public:
         }
     }
 };
+
+
+/*
+
+1. insert
+- if uncle is red, recolor
+- if uncle is black, restructure
+
+2. delete
+- 
+
+*/
